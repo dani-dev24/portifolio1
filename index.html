@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="intractivity.js"></script>
+    <!-- Consider adding Font Awesome for icons -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> -->
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="#home" class="nav-logo">Your Name</a>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <!-- <li><a href="#blog">Blog</a></li> -->
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <!-- Add a hamburger menu button for mobile if needed -->
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section (Hero) -->
+        <section id="home" class="hero-section">
+            <div class="container hero-content">
+                <h1>Welcome! I'm [Your Name]</h1>
+                <p class="subtitle">[Your Title or Tagline - e.g., Frontend Developer | UI/UX Enthusiast]</p>
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+            </div>
+            <!-- Background image set in CSS -->
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <img src="images/profile.jpg" alt="Your Name - Professional Photo" class="profile-photo">
+                    <div class="about-text">
+                        <p>Hello! I'm [Your Name], a passionate [Your Role/Field] based in [Your Location]. My journey into [Your Field] started with [briefly mention origin/motivation].</p>
+                        <p>I thrive on solving problems and creating intuitive, engaging digital experiences. My core skills include [mention 2-3 key skills briefly, e.g., React, Node.js, UI Design].</p>
+                        <p>When I'm not coding or designing, you can find me [mention a hobby or interest]. Let's connect!</p>
+                        <div class="social-links-about">
+                            <a href="[Your LinkedIn URL]" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                            <a href="[Your GitHub URL]" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="[Your Twitter URL]" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i> Twitter</a>
+                            <!-- Add other relevant links -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Showcase Section -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="project-grid">
+                    <!-- Project Card 1 -->
+                    <div class="project-card">
+                        <img src="images/project1.jpg" alt="Project 1 Screenshot">
+                        <div class="project-info">
+                            <h3>Project Title 1</h3>
+                            <p>Brief description of the project, its purpose, and key features.</p>
+                            <p><strong>Technologies:</strong> React, Node.js, MongoDB</p>
+                            <p><strong>Challenges:</strong> Implementing real-time updates was tricky but solved using WebSockets.</p>
+                            <div class="project-links">
+                                <a href="[Live Demo URL 1]" target="_blank" class="btn btn-secondary">Live Demo</a>
+                                <a href="[GitHub Repo URL 1]" target="_blank" class="btn btn-outline">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 2 -->
+                    <div class="project-card">
+                        <img src="images/project2.jpg" alt="Project 2 Screenshot">
+                         <div class="project-info">
+                            <h3>Project Title 2</h3>
+                            <p>Description for the second project highlighting different aspects or technologies.</p>
+                            <p><strong>Technologies:</strong> HTML, CSS, JavaScript, PHP</p>
+                            <p><strong>Outcomes:</strong> Improved user engagement by 15% through interactive elements.</p>
+                            <div class="project-links">
+                                <a href="[Live Demo URL 2]" target="_blank" class="btn btn-secondary">Live Demo</a>
+                                <a href="[GitHub Repo URL 2]" target="_blank" class="btn btn-outline">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 3 -->
+                    <div class="project-card">
+                        <img src="images/project3.jpg" alt="Project 3 Screenshot">
+                         <div class="project-info">
+                            <h3>Project Title 3</h3>
+                            <p>Another project showcasing skills, perhaps a design-focused one or a backend service.</p>
+                            <p><strong>Technologies:</strong> Vue.js, Firebase, Figma</p>
+                            <p><strong>Challenges:</strong> Ensuring cross-browser compatibility for complex animations.</p>
+                            <div class="project-links">
+                                <!-- <a href="#" target="_blank" class="btn btn-secondary">Live Demo</a> -->
+                                <a href="[GitHub Repo URL 3]" target="_blank" class="btn btn-outline">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more project cards as needed -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <h2>Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Frontend</h3>
+                        <ul>
+                            <li>HTML5 & CSS3</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>React / Vue.js</li>
+                            <li>Tailwind CSS / Bootstrap</li>
+                            <li>Responsive Design</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Backend</h3>
+                        <ul>
+                            <li>Node.js / Express</li>
+                            <li>PHP</li>
+                            <li>REST APIs</li>
+                            <li>SQL (PostgreSQL/MySQL)</li>
+                            <li>NoSQL (MongoDB)</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Tools & Others</h3>
+                        <ul>
+                            <li>Git & GitHub</li>
+                            <li>Docker</li>
+                            <li>Figma / Sketch</li>
+                            <li>Agile Methodologies</li>
+                            <li>Testing (Jest/Mocha)</li>
+                        </ul>
+                    </div>
+                    <!-- Add more categories or use visual elements like bars/charts later -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section (Optional) -->
+        <section id="testimonials" class="testimonials-section">
+            <div class="container">
+                <h2>Testimonials</h2>
+                <div class="testimonial-slider"> <!-- Basic structure, slider needs JS -->
+                    <div class="testimonial">
+                        <blockquote>
+                            <p>"[Quote from colleague/client about your work, skills, or work ethic. Make it impactful and specific if possible.]"</p>
+                            <footer>- [Name], <cite>[Title/Company]</cite></footer>
+                        </blockquote>
+                    </div>
+                    <div class="testimonial">
+                        <blockquote>
+                            <p>"[Another quote highlighting a different strength or project.]"</p>
+                            <footer>- [Name], <cite>[Title/Company]</cite></footer>
+                        </blockquote>
+                    </div>
+                    <!-- Add more testimonials -->
+                </div>
+            </div>
+        </section>
+
+         <!-- Blog Section (Optional - Placeholder) -->
+        <!--
+        <section id="blog" class="blog-section">
+            <div class="container">
+                <h2>Recent Articles</h2>
+                <div id="blog-posts">
+                    <-- Blog posts will be loaded here via JavaScript/API ->
+                    <p>Loading latest posts...</p>
+                </div>
+                <a href="[Link to your Medium/Blog main page]" target="_blank" class="btn btn-outline">View All Posts</a>
+            </div>
+        </section>
+        -->
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <p>Have a question or want to work together? Feel free to reach out!</p>
+                <form id="contact-form" action="php/contact_handler.php" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <div id="form-status"></div> <!-- For success/error messages -->
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-social-links">
+                <a href="[Your LinkedIn URL]" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="[Your GitHub URL]" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="[Your Twitter URL]" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <!-- Add others -->
+            </div>
+            <p>© <span id="current-year"></span> [Your Name]. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

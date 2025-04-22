@@ -1,0 +1,494 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-color: #007bff; /* Example: Blue */
+    --secondary-color: #6c757d; /* Example: Gray */
+    --background-color: #f8f9fa; /* Light gray background */
+    --text-color: #333;
+    --heading-font: 'Arial', sans-serif; /* Choose appropriate fonts */
+    --body-font: 'Georgia', serif;
+    --card-background: #fff;
+    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --container-width: 960px; /* Max width for content */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
+}
+
+body {
+    font-family: var(--body-font);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px; /* Padding on smaller screens */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+
+section {
+    padding: 60px 0; /* Vertical padding for sections */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: darken(var(--primary-color), 10%);
+}
+
+ul {
+    list-style: none;
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 5px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: darken(var(--primary-color), 10%);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: darken(var(--secondary-color), 10%);
+     transform: translateY(-2px);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+     transform: translateY(-2px);
+}
+
+
+/* --- Header & Navigation --- */
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed; /* Sticky nav */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.nav-menu li {
+    margin-left: 20px;
+}
+
+.nav-menu a {
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 5px 0;
+    position: relative;
+}
+
+.nav-menu a::after { /* Underline effect on hover/active */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after { /* Need JS to add 'active' class */
+    width: 100%;
+}
+
+
+/* --- Hero Section --- */
+.hero-section {
+    background: url('../images/hero-background.jpg') no-repeat center center/cover;
+    color: #fff; /* Adjust text color based on background */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 60px; /* Account for fixed navbar */
+    position: relative; /* For overlay */
+}
+
+.hero-section::before { /* Optional overlay for text readability */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative; /* To stay above the overlay */
+    z-index: 2;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-section .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+/* --- About Section --- */
+.about-section .container {
+    max-width: 800px; /* Slightly narrower for readability */
+}
+
+.about-content {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    gap: 40px; /* Space between image and text */
+}
+
+.profile-photo {
+    width: 200px; /* Adjust size as needed */
+    height: 200px;
+    border-radius: 50%; /* Circular photo */
+    object-fit: cover; /* Ensure image covers the area */
+    flex-shrink: 0; /* Prevent image from shrinking */
+    border: 5px solid var(--primary-color);
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+}
+
+.social-links-about a {
+    margin-right: 15px;
+    font-size: 1.2rem;
+    /* Add icons using Font Awesome or SVGs */
+}
+.social-links-about i { /* Example if using Font Awesome */
+    margin-right: 5px;
+}
+
+
+/* --- Projects Section --- */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    overflow: hidden; /* Keep image corners rounded */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 20px;
+    flex-grow: 1; /* Allows info section to fill space */
+    display: flex;
+    flex-direction: column;
+}
+
+.project-info h3 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.project-info p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.project-info p strong {
+    font-weight: bold;
+}
+
+.project-links {
+    margin-top: auto; /* Push links to the bottom */
+    padding-top: 10px;
+}
+
+/* --- Skills Section --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.skill-category h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.skill-category ul li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+/* --- Testimonials Section --- */
+.testimonials-section {
+    background-color: #e9ecef; /* Slightly different background */
+}
+
+.testimonial-slider { /* Basic layout, JS needed for actual sliding */
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.testimonial blockquote {
+    background: var(--card-background);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 20px; /* Spacing between testimonials if stacked */
+    border-left: 5px solid var(--primary-color);
+}
+
+.testimonial blockquote p {
+    font-style: italic;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.testimonial footer {
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.testimonial cite {
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* --- Contact Section --- */
+.contact-section .container {
+    max-width: 600px;
+}
+
+.contact-section p {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+#contact-form button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+}
+
+#form-status {
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.form-status.success {
+    color: green;
+}
+
+.form-status.error {
+    color: red;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #343a40; /* Dark footer */
+    color: #f8f9fa;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 40px;
+}
+
+.footer-social-links a {
+    color: #f8f9fa;
+    font-size: 1.5rem;
+    margin: 0 10px;
+}
+
+.footer-social-links a:hover {
+    color: var(--primary-color);
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    .navbar .container {
+        /* Add styles for hamburger menu toggle here */
+    }
+
+    .nav-menu {
+        /* Hide menu by default on mobile, show on toggle */
+        display: none; /* Or position off-screen */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        padding: 10px 0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .nav-menu li {
+        margin: 10px 20px;
+        text-align: center;
+    }
+    /* Need JS to toggle a class like 'active' on .nav-menu */
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .hero-section .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .about-content {
+        flex-direction: column; /* Stack image and text */
+        align-items: center; /* Center items when stacked */
+        text-align: center;
+    }
+
+    .profile-photo {
+        margin-bottom: 20px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr; /* Stack skill categories */
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr; /* Stack project cards */
+    }
+}
